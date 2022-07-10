@@ -3,15 +3,17 @@
   color: hsl(0, 100%, 50%);
 }
 
-.small-para {
-  font-size: 14px;
-}
-
 .para {
   font-size: 22px;
 }
 
-.confirm {
+/* Moved .small-para below since it has same specificity as .para*/
+.small-para {
+  font-size: 14px;
+}
+
+/* Changed to ID for specificity */
+#confirm-button {
   background: green;
   color: white;
   font-weight: bold;
@@ -23,7 +25,8 @@
   font-size: 20px;
 }
 
-.child {
+/* Added .text parent class to increase specificity */
+.text .child {
   color: red;
   font-size: 14px;
 }
